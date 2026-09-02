@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+
+  code,
+  .mono {
+    font-family: var(--font-mono);
+  }
+
+  :focus-visible {
+    outline: 2px solid #b8863b;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+@layer utilities {
+  .container-content {
+    @apply mx-auto w-full max-w-content px-6 md:px-10;
+  }
+
+  .section-pad {
+    @apply py-20 md:py-28;
+  }
+}
+
+/* ---- Bootstrap Modal: minimal structural CSS ----
+   We intentionally do NOT import the full bootstrap.css bundle (it would
+   fight Tailwind's reset). This is the small subset of positioning rules
+   Bootstrap's Modal JS relies on (it toggles these classes/inline styles
+   itself for show/hide, backdrop, and Escape-key handling); all visual
+   styling is custom and scoped under .media-modal. */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1055;
+  display: none;
+  outline: 0;
+}
+.modal.show {
+  display: block;
+}
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 1rem;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  min-height: calc(100% - 2rem);
+  transition: transform 0.2s ease-out;
+  transform: translateY(-24px);
+}
+.modal.show .modal-dialog {
+  transform: none;
+}
+.modal-content {
+  position: relative;
+  pointer-events: auto;
+  width: 100%;
+}
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1050;
+  background-color: #0a0f0e;
+  opacity: 0;
+  transition: opacity 0.15s linear;
+}
+.modal-backdrop.show {
+  opacity: 0.86;
+}
+
+.media-modal .modal-dialog {
+  max-width: min(96vw, 1100px);
+  margin: 2.5vh auto;
+  max-height: 95vh;
+}
+
+.media-modal .modal-content {
+  background: #14201e;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  color: #f7f5f1;
+  max-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  /* Safety net: if the header/controls ever push total height past 95vh
+     on a short screen, the modal scrolls instead of clipping content. */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.media-modal .modal-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1rem 1.25rem;
+  flex: none;
+}
+
+.media-modal .modal-body {
+  padding: 0;
+  background: #0d1513;
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.media-modal video,
+.media-modal img {
+  max-width: 100%;
+  /* Hard cap independent of flex layout, so it never depends on the parent
+     resolving flex sizing correctly — this alone guarantees room is left
+     for the header and controls below it. */
+  max-height: 52vh;
+  width: auto;
+  height: auto;
+  display: block;
+  margin: auto;
+  background: #000;
+  object-fit: contain;
+}
+
+.media-modal .modal-speed-row,
+.media-modal .modal-counter-row {
+  flex: none;
+}
+
+.media-nav-btn {
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+.media-nav-btn:hover {
+  background-color: rgba(255, 255, 255, 0.14);
+}
+.media-nav-btn:active {
+  transform: scale(0.96);
+}

@@ -17,7 +17,7 @@ export default function ProjectCard({
 
   return (
     <article
-      className={`group rounded-xl2 border border-ink/10 bg-white/70 transition-all duration-300 hover:border-pine-300 hover:-translate-y-1 hover:shadow-card flex flex-col ${
+      className={`group h-full rounded-xl2 border border-ink/10 bg-white/70 transition-all duration-300 hover:border-pine-300 hover:-translate-y-1 hover:shadow-card flex flex-col ${
         featured ? "p-7 md:p-8" : "p-6"
       }`}
     >

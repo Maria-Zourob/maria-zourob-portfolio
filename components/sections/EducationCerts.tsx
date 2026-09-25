@@ -4,8 +4,8 @@ import Reveal from "@/components/ui/Reveal";
 export default function EducationCerts() {
   return (
     <section id="education" className="section-pad border-t border-ink/8 bg-paper-dim/40">
-      <div className="container-content grid lg:grid-cols-2 gap-16">
-        <Reveal>
+      <div className="container-content grid lg:grid-cols-2 gap-16 lg:items-start">
+        <Reveal className="lg:sticky lg:top-28 lg:self-start">
           <h2 className="text-3xl font-display font-semibold">Education</h2>
           <div className="mt-8 space-y-8">
             {education.map((e) => (

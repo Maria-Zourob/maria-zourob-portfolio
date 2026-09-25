@@ -31,6 +31,34 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    id: "batikha-media-management",
+    title: "Batikha Media Group — Internal Management System",
+    shortDescription:
+      "A complete internal management system built in one week for Batikha Media Group, covering projects, tasks, team, and workflows.",
+    category: "Full Stack",
+    featured: true,
+    technologies: ["Next.js", "Docker", "CI/CD", "Git", "REST APIs"],
+    overview:
+      "A complete internal management system built in one week for Batikha Media Group, designed to help the team manage projects, tasks, team members, and workflows from one place. The project covered Frontend, Backend, UI/UX, APIs, Authentication, Git workflow, Docker, and CI/CD, built as a 3-person team.",
+    solution:
+      "Built as a bilingual (Arabic/English, RTL/LTR) system with dark/light mode, a Jira-inspired drag-and-drop task board, dynamic project progress tracking tied to task completion, and AI-assisted task planning.",
+    features: [
+      "Dashboard — overview of projects, tasks, team members, statuses, and progress",
+      "Project management — create, edit, delete projects; assign members; set deadlines; progress dynamically tied to task completion",
+      "Task management — Jira-inspired drag & drop between statuses, with assigned member, deadline, details, and notes per task",
+      "Team management — add, activate, deactivate members; filter by name, status, and type",
+      "Arabic / English with full RTL / LTR support",
+      "Dark / light mode",
+      "AI task suggestions — generates a full task plan for a project, reviewable and editable before creation",
+    ],
+    contribution:
+      "Frontend Development & UI/UX — interfaces, user experience, API integration, and interactive features, as part of a 3-person team built in one week. Backend, APIs, Docker, and CI/CD were built by a teammate, under the guidance of a supervising engineer on requirements, task breakdown, and Git workflow.",
+    liveDemo: "https://batikha.site/",
+    videos: [
+      { title: "Batikha Media Group — Walkthrough", src: "/videos/batikha-media/Overview.mp4" },
+    ],
+  },
+  {
     id: "dental-clinic",
     title: "Dental Clinic Management System",
     shortDescription:
@@ -51,7 +79,7 @@ export const projects: Project[] = [
     ],
     contribution: "Full Stack Developer — designed and built the entire application end to end.",
     videos: [
-      { title: "Dental Clinic — Overview", src: "/videos/dental-clinic/Overview.mkv" },
+      { title: "Dental Clinic — Overview", src: "/videos/dental-clinic/Overview.mp4" },
     ],
   },
   {

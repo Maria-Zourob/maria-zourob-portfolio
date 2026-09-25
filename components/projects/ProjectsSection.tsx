@@ -28,9 +28,9 @@ export default function ProjectsSection() {
           </p>
         </Reveal>
 
-        <div className="mt-10 grid md:grid-cols-2 gap-6">
+        <div className="mt-10 grid md:grid-cols-2 gap-6 items-stretch">
           {featuredProjects.map((p, i) => (
-            <Reveal key={p.id} delay={i * 90}>
+            <Reveal key={p.id} delay={i * 90} className="h-full">
               <ProjectCard project={p} onViewDetails={setDetailsId} featured />
             </Reveal>
           ))}
@@ -44,9 +44,9 @@ export default function ProjectsSection() {
           <ProjectFilter active={filter} onChange={setFilter} />
         </Reveal>
 
-        <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 items-stretch">
           {filtered.map((p, i) => (
-            <div key={p.id} className="animate-fade-up" style={{ animationDelay: `${(i % 6) * 60}ms` }}>
+            <div key={p.id} className="animate-fade-up h-full" style={{ animationDelay: `${(i % 6) * 60}ms` }}>
               <ProjectCard project={p} onViewDetails={setDetailsId} />
             </div>
           ))}

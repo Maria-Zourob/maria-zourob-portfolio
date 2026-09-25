@@ -4,8 +4,8 @@ import Reveal from "@/components/ui/Reveal";
 export default function About() {
   return (
     <section id="about" className="section-pad border-t border-ink/8">
-      <div className="container-content grid md:grid-cols-[0.4fr_0.6fr] gap-10 md:gap-16">
-        <Reveal>
+      <div className="container-content grid md:grid-cols-[0.4fr_0.6fr] gap-10 md:gap-16 md:items-start">
+        <Reveal className="md:sticky md:top-28 md:self-start">
           <h2 className="text-3xl font-display font-semibold">About</h2>
           <p className="mt-3 text-ink/60 max-w-xs">
             A quick look at how I got here and how I like to build software.

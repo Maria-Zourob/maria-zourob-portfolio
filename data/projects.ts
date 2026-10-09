@@ -38,6 +38,7 @@ export const projects: Project[] = [
     category: "Full Stack",
     featured: true,
     technologies: ["Next.js", "Docker", "CI/CD", "Git", "REST APIs"],
+    images: ["/images/projects/batikha-media-management/cover.jpg"],
     overview:
       "A complete internal management system built in one week for Batikha Media Group, designed to help the team manage projects, tasks, team members, and workflows from one place. The project covered Frontend, Backend, UI/UX, APIs, Authentication, Git workflow, Docker, and CI/CD, built as a 3-person team.",
     solution:
@@ -66,6 +67,7 @@ export const projects: Project[] = [
     category: "Full Stack",
     featured: true,
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "PostgreSQL"],
+    images: ["/images/projects/dental-clinic/cover.jpg"],
     overview:
       "A full-stack, Arabic RTL dental clinic management platform built for Emad Saqr Dental Clinic, covering scheduling, patient records, billing, and clinic analytics.",
     solution:
@@ -90,6 +92,8 @@ export const projects: Project[] = [
     category: "Full Stack",
     featured: true,
     technologies: ["ASP.NET Core MVC", "C#", "SQL Server", "Tailwind CSS", "JavaScript"],
+    images: ["/images/projects/sham-stack-website/cover.jpg"],
+    liveDemo: "https://shamstack.com/",
     overview: "The company web platform for Sham Stack, developed collaboratively within a team-based Git workflow.",
     solution: "Implemented responsive UI sections and backend functionality using ASP.NET Core MVC, C#, and SQL Server.",
     features: ["Responsive UI sections", "Backend functionality integrated with the team's shared codebase"],
@@ -103,6 +107,7 @@ export const projects: Project[] = [
     category: "Full Stack",
     featured: true,
     technologies: ["ASP.NET Core", "C#", "Entity Framework Core", "SQL Server"],
+    images: ["/images/projects/alhitham/cover.jpg"],
     overview: "An educational web platform integrating backend functionality with structured database design.",
     solution: "Built responsive interfaces integrating backend functionality and database structures using ASP.NET Core, C#, and Entity Framework Core.",
     contribution: "Full Stack Developer.",
@@ -119,6 +124,7 @@ export const projects: Project[] = [
     category: "Full Stack",
     featured: true,
     technologies: ["ASP.NET Core MVC", "Entity Framework Core", "SQL Server"],
+    images: ["/images/projects/blog-platform/cover.jpg"],
     overview: "A full-stack blogging platform built for college use.",
     solution: "Implemented authentication, role-based authorization, article management, comments, and categories using ASP.NET Core MVC and Entity Framework Core.",
     features: ["Authentication & role-based authorization", "Article management", "Comments", "Categories"],
@@ -135,6 +141,8 @@ export const projects: Project[] = [
     category: "Full Stack",
     featured: false,
     technologies: ["React", "Tailwind CSS", "ASP.NET Core Web API", "Entity Framework Core", "SQL Server"],
+    images: ["/images/projects/inventory-dashboard/cover.jpg"],
+    liveDemo: "https://inventory-sales-dashboard.vercel.app/",
     overview: "A full-stack inventory and sales management dashboard for tracking products and processing sales.",
     solution:
       "Implemented product management, sales processing, JWT authentication, analytics, and a responsive admin interface with dark mode, using a 3-tier architecture.",
@@ -156,19 +164,12 @@ export const projects: Project[] = [
     category: "Frontend",
     featured: false,
     technologies: ["HTML", "CSS", "JavaScript", "Tailwind CSS"],
+    images: ["/images/projects/linkedin-workshop/cover.jpg"],
+    liveDemo: "https://maria-zourob.github.io/linkedin-profile-workshop/",
     overview: "An interactive LinkedIn profile workshop website.",
     solution: "Built responsive layouts and client-side interactions, polished across screen sizes.",
     contribution: "Full Stack Developer.",
     videos: [{ title: "LinkedIn Workshop — Overview", src: "/videos/linkedin-workshop/Linkedin.mp4" }],
-  },
-  {
-    id: "bootstrap-project",
-    title: "Bootstrap Project",
-    shortDescription: "A frontend project built with Bootstrap.",
-    category: "Frontend",
-    featured: false,
-    technologies: ["Bootstrap", "HTML", "CSS", "JavaScript"],
-    videos: [{ title: "Bootstrap Project — Overview", src: "/videos/bootstrap-project/BootstrapProject.mp4" }],
   },
   {
     id: "creativo",
@@ -177,6 +178,8 @@ export const projects: Project[] = [
     category: "Frontend",
     featured: false,
     technologies: [],
+    images: ["/images/projects/creativo/cover.jpg"],
+    liveDemo: "https://criativo-hg26oz3gc-maria-ad77.vercel.app/",
     videos: [{ title: "Creativo — Overview", src: "/videos/creativo/Creativo.mp4" }],
   },
   {
@@ -186,6 +189,8 @@ export const projects: Project[] = [
     category: "Frontend",
     featured: false,
     technologies: [],
+    images: ["/images/projects/serenity/cover.jpg"],
+    liveDemo: "https://serenity-installtailwind.vercel.app/",
     videos: [{ title: "Serenity — Overview", src: "/videos/serenity/Serenity.mp4" }],
   },
   {
@@ -195,6 +200,7 @@ export const projects: Project[] = [
     category: "Other",
     featured: false,
     technologies: ["C#", "WPF"],
+    images: ["/images/projects/wpf-multiply-game/cover.jpg"],
     videos: [{ title: "WPF Multiply Game — Overview", src: "/videos/wpf-multiply-game/WPF-Multiply-Game.mp4" }],
   },
   {
@@ -205,6 +211,7 @@ export const projects: Project[] = [
     category: "Backend",
     featured: false,
     technologies: ["ASP.NET Core", "C#", "SQL Server"],
+    images: ["/images/projects/movie-catalog-api/cover.jpg"],
     overview: "An individual, self-directed project to build a RESTful API for managing a movie catalog.",
     contribution: "Built independently as a personal/learning project.",
     github: "https://github.com/Maria-Zourob/MovieCatalogAPI",

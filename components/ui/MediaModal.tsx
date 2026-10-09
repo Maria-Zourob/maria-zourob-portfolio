@@ -114,28 +114,29 @@ export default function MediaModal() {
           </div>
 
           <div className="modal-body relative">
-            {/* Only mounted while open, so nothing preloads or keeps playing in the background. */}
-            {isOpen &&
-              current &&
-              (current.type === "video" ? (
-                <video
-                  key={current.src}
-                  ref={videoRef}
-                  src={current.src}
-                  controls
-                  autoPlay
-                  playsInline
-                  poster={current.poster}
-                  onLoadedMetadata={() => {
-                    if (videoRef.current) videoRef.current.playbackRate = speed;
-                  }}
-                  className="w-full"
-                >
-                  Your browser does not support embedded video.
-                </video>
-              ) : (
-                <img key={current.src} src={current.src} alt={current.title} />
-              ))}
+  {/* Only mounted while open, so nothing preloads or keeps playing in the background. */}
+  {isOpen &&
+    current &&
+    (current.type === "video" ? (
+      <video
+        key={current.src}
+        ref={videoRef}
+        src={current.src}
+        controls
+        autoPlay
+        playsInline
+        preload="metadata"
+        poster={current.poster}
+        onLoadedMetadata={() => {
+          if (videoRef.current) videoRef.current.playbackRate = speed;
+        }}
+        className="w-full"
+      >
+        Your browser does not support embedded video.
+      </video>
+    ) : (
+      <img key={current.src} src={current.src} alt={current.title} />
+    ))}
 
             {hasMultiple && (
               <>

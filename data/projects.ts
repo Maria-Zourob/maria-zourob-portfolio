@@ -122,7 +122,7 @@ export const projects: Project[] = [
     title: "College Blog Platform",
     shortDescription: "A full-stack blogging platform with authentication, articles, comments, and categories.",
     category: "Full Stack",
-    featured: true,
+    featured: false,
     technologies: ["ASP.NET Core MVC", "Entity Framework Core", "SQL Server"],
     images: ["/images/projects/blog-platform/cover.jpg"],
     overview: "A full-stack blogging platform built for college use.",

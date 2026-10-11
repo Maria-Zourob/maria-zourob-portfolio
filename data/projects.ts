@@ -98,7 +98,9 @@ export const projects: Project[] = [
     solution: "Implemented responsive UI sections and backend functionality using ASP.NET Core MVC, C#, and SQL Server.",
     features: ["Responsive UI sections", "Backend functionality integrated with the team's shared codebase"],
     contribution: "Full Stack Developer — team project, contributed frontend sections and backend functionality.",
-    videos: [],
+    videos: [
+  { title: "Sham Stack Website — Overview", src: "/videos/sham-stack-website/Overview.mp4" },
+],
   },
   {
     id: "alhitham",
